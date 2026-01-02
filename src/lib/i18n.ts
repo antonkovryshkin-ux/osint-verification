@@ -77,6 +77,19 @@ export const translations = {
             feat3_desc: "Photos from private profiles and archives.",
             feat4_title: "IP History",
             feat4_desc: "List of IP addresses and login devices."
+        },
+        social_proof: {
+            scans_today: "Scans Today",
+            profiles_detected: "Profiles Detected",
+            testimonials_title: "Anonymous User Stories",
+            t1_text: "I found out my boyfriend was active on three different dating apps thanks to this service. It saved me from a toxic relationship.",
+            t1_author: "Sarah J.",
+            t2_text: "For months, I suspected my husband was working late. The scan revealed a hidden social media profile filled with flirtatious messages.",
+            t2_author: "Anna C.",
+            t3_text: "After catching my partner in a small lie, a nagging suspicion wouldn't leave me. This check helped me exit the relationship with confidence.",
+            t3_author: "Mary T.",
+            t4_text: "Their investigation showed my girlfriend had been hiding multiple boyfriends. The information was a wake-up call.",
+            t4_author: "Peter S."
         }
     },
     de: {
@@ -155,6 +168,19 @@ export const translations = {
             feat3_desc: "Fotos aus privaten Profilen.",
             feat4_title: "IP-Historie",
             feat4_desc: "Liste der IP-Adressen und Geräte."
+        },
+        social_proof: {
+            scans_today: "Scans heute",
+            profiles_detected: "Profile gefunden",
+            testimonials_title: "Anonyme Nutzergeschichten",
+            t1_text: "Dank dieses Dienstes fand ich heraus, dass mein Freund auf drei Dating-Apps aktiv war. Es hat mich gerettet.",
+            t1_author: "Sarah J.",
+            t2_text: "Monatelang verdächtigte ich meinen Mann. Der Scan enthüllte ein verstecktes Profil mit Flirtnachrichten.",
+            t2_author: "Anna C.",
+            t3_text: "Nach einer kleinen Lüge blieb der Verdacht. Dieser Check half mir, die Beziehung mit Sicherheit zu beenden.",
+            t3_author: "Mary T.",
+            t4_text: "Die Untersuchung zeigte, dass meine Freundin mehrere Freunde verheimlichte. Ein Weckruf.",
+            t4_author: "Peter S."
         }
     },
     fr: {
@@ -233,6 +259,19 @@ export const translations = {
             feat3_desc: "Photos de profils privés.",
             feat4_title: "Historique IP",
             feat4_desc: "Liste des adresses IP et appareils."
+        },
+        social_proof: {
+            scans_today: "Scans aujourd'hui",
+            profiles_detected: "Profils détectés",
+            testimonials_title: "Histoires d'utilisateurs anonymes",
+            t1_text: "J'ai découvert que mon copain était actif sur trois applis de rencontre. Ce service m'a sauvée.",
+            t1_author: "Sarah J.",
+            t2_text: "Je soupçonnais mon mari depuis des mois. Le scan a révélé un profil caché avec des messages de flirt.",
+            t2_author: "Anna C.",
+            t3_text: "Après un petit mensonge, le doute persistait. Cette vérification m'a aidé à partir sereinement.",
+            t3_author: "Mary T.",
+            t4_text: "L'enquête a montré que ma copine cachait plusieurs petits amis. C'était un réveil brutal.",
+            t4_author: "Peter S."
         }
     },
     it: {
@@ -311,6 +350,19 @@ export const translations = {
             feat3_desc: "Foto da profili privati.",
             feat4_title: "Storia IP",
             feat4_desc: "Lista indirizzi IP e dispositivi."
+        },
+        social_proof: {
+            scans_today: "Scansioni oggi",
+            profiles_detected: "Profili rilevati",
+            testimonials_title: "Storie di utenti anonimi",
+            t1_text: "Ho scoperto che il mio ragazzo era attivo su tre app di incontri. Questo servizio mi ha salvata.",
+            t1_author: "Sarah J.",
+            t2_text: "Sospettavo di mio marito da mesi. La scansione ha rivelato un profilo nascosto con messaggi.",
+            t2_author: "Anna C.",
+            t3_text: "Dopo una piccola bugia, il dubbio è rimasto. Questo controllo mi ha aiutato a chiudere con sicurezza.",
+            t3_author: "Mary T.",
+            t4_text: "L'indagine ha mostrato che la mia ragazza nascondeva più ragazzi. È stata una sveglia.",
+            t4_author: "Peter S."
         }
     },
     es: {
@@ -389,6 +441,19 @@ export const translations = {
             feat3_desc: "Fotos de perfiles privados.",
             feat4_title: "Historial IP",
             feat4_desc: "Lista de direcciones IP y dispositivos."
+        },
+        social_proof: {
+            scans_today: "Escaneos hoy",
+            profiles_detected: "Perfiles detectados",
+            testimonials_title: "Historias de usuarios anónimos",
+            t1_text: "Descubrí que mi novio estaba activo en tres apps de citas. Este servicio me salvó.",
+            t1_author: "Sarah J.",
+            t2_text: "Sospechaba de mi esposo hacía meses. El escaneo reveló un perfil oculto con mensajes.",
+            t2_author: "Anna C.",
+            t3_text: "Tras una pequeña mentira, la duda quedó. Esta verificación me ayudó a terminar con seguridad.",
+            t3_author: "Mary T.",
+            t4_text: "La investigación mostró que mi novia ocultaba varios novios. Fue un despertar.",
+            t4_author: "Peter S."
         }
     },
     ru: {
@@ -467,6 +532,19 @@ export const translations = {
             feat3_desc: "Фотографии из закрытых профилей и архивов.",
             feat4_title: "История IP",
             feat4_desc: "Список IP-адресов и устройств входа."
+        },
+        social_proof: {
+            scans_today: "Проверок сегодня",
+            profiles_detected: "Найдено профилей",
+            testimonials_title: "Анонимные истории",
+            t1_text: "Узнала, что парень сидит на трех сайтах знакомств. Этот сервис спас меня от токсичных отношений.",
+            t1_author: "Sarah J.",
+            t2_text: "Подозревала мужа месяцами. Скан выявил скрытый профиль с переписками. Спасибо.",
+            t2_author: "Anna C.",
+            t3_text: "После мелкой лжи сомнения не давали покоя. Эта проверка помогла мне уйти с уверенностью.",
+            t3_author: "Mary T.",
+            t4_text: "Проверка показала, что моя девушка скрывала нескольких парней. Это открыло мне глаза.",
+            t4_author: "Peter S."
         }
     }
 };
