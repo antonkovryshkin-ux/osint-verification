@@ -12,8 +12,8 @@ export function BentoFeatures({ t }: { t: any }) {
         { name: "New York, US", top: "33%", left: "28%" },
         { name: "Tokyo, JP", top: "36%", left: "86%" },
         { name: "London, UK", top: "26%", left: "48%" },
-        { name: "Sydney, AU", top: "78%", left: "90%" },
-        { name: "Rio, BR", top: "70%", left: "33%" }
+        { name: "Sydney, AU", top: "72%", left: "85%" },
+        { name: "Rio, BR", top: "68%", left: "33%" }
     ];
 
     useEffect(() => {
