@@ -8,12 +8,12 @@ export function BentoFeatures({ t }: { t: any }) {
     const [locationIndex, setLocationIndex] = useState(0);
 
     const locations = [
-        { name: "Paris, FR", top: "29%", left: "50%" },
+        { name: "Paris, FR", top: "27%", left: "49%" },
         { name: "New York, US", top: "32%", left: "29%" },
-        { name: "Tokyo, JP", top: "34%", left: "87%" },
-        { name: "London, UK", top: "27%", left: "49%" },
-        { name: "Sydney, AU", top: "64%", left: "86%" },
-        { name: "Rio, BR", top: "59%", left: "34%" }
+        { name: "Tokyo, JP", top: "38%", left: "85%" },
+        { name: "London, UK", top: "25%", left: "48%" },
+        { name: "Sydney, AU", top: "75%", left: "88%" },
+        { name: "Rio, BR", top: "65%", left: "32%" }
     ];
 
     useEffect(() => {
@@ -28,7 +28,49 @@ export function BentoFeatures({ t }: { t: any }) {
     return (
         <div className="w-full max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
 
-            {/* ... (Social Profiles Card Omitted) ... */}
+            {/* Card 1: Social Profiles (Large) */}
+            <div className="md:col-span-2 row-span-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 relative overflow-hidden group hover:border-blue-500/30 transition-all duration-500">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <Globe className="w-32 h-32 text-blue-400" />
+                </div>
+                <div className="relative z-10 h-full flex flex-col">
+                    <div className="flex items-center gap-3 mb-4">
+                        <div className="p-2 bg-blue-500/20 rounded-xl">
+                            <User className="w-6 h-6 text-blue-400" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white">{t?.social_profiles}</h3>
+                    </div>
+
+                    <div className="flex-1 overflow-hidden relative">
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+                            {[
+                                { name: "Instagram", color: "bg-pink-600" },
+                                { name: "Tinder", color: "bg-rose-500" },
+                                { name: "Facebook", color: "bg-blue-600" },
+                                { name: "Bumble", color: "bg-yellow-500" },
+                                { name: "Telegram", color: "bg-sky-500" },
+                                { name: "WhatsApp", color: "bg-green-600" }
+                            ].map((social, i) => (
+                                <div key={i} className="flex items-center gap-2 p-3 bg-white/5 rounded-xl border border-white/5 hover:bg-white/10 transition-colors">
+                                    <div className={`w-2 h-2 rounded-full ${social.color}`} />
+                                    <span className="text-sm text-slate-300">{social.name}</span>
+                                    <CheckCircle className="w-3 h-3 text-green-400 ml-auto" />
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Floating Badge */}
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute bottom-4 right-4 bg-green-500/20 backdrop-blur-md border border-green-500/30 px-4 py-2 rounded-full flex items-center gap-2"
+                        >
+                            <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                            <span className="text-sm font-medium text-green-300">12 {t?.match}</span>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
 
             {/* Card 2: Location Data (Vertical) */}
             <div className="md:col-span-1 row-span-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-6 relative overflow-hidden group hover:border-emerald-500/30 transition-all duration-500">
@@ -42,8 +84,8 @@ export function BentoFeatures({ t }: { t: any }) {
                 </div>
 
                 <div className="relative h-64 w-full bg-slate-900/50 rounded-2xl border border-white/10 overflow-hidden">
-                    {/* Abstract Map UI - Changed to bg-contain to ensure accurate coordinates */}
-                    <div className="absolute inset-0 opacity-30 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-contain bg-center bg-no-repeat" />
+                    {/* Abstract Map UI - Reverted to bg-cover for full fill */}
+                    <div className="absolute inset-0 opacity-30 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-cover bg-center bg-no-repeat" />
 
                     <motion.div
                         // Animate position changes
