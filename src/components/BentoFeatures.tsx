@@ -1,8 +1,30 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { MapPin, User, Activity, CheckCircle, Smartphone, Globe, Shield } from "lucide-react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function BentoFeatures({ t }: { t: any }) {
+    // Dynamic Location Logic
+    const [locationIndex, setLocationIndex] = useState(0);
+
+    const locations = [
+        { name: "Paris, FR", top: "27%", left: "49%" },
+        { name: "New York, US", top: "32%", left: "29%" },
+        { name: "Tokyo, JP", top: "38%", left: "85%" },
+        { name: "London, UK", top: "25%", left: "48%" },
+        { name: "Sydney, AU", top: "75%", left: "88%" },
+        { name: "Rio, BR", top: "65%", left: "32%" }
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setLocationIndex((prev) => (prev + 1) % locations.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    const currentLocation = locations[locationIndex];
+
     return (
         <div className="w-full max-w-6xl mx-auto p-4 grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
 
@@ -66,10 +88,10 @@ export function BentoFeatures({ t }: { t: any }) {
                     <div className="absolute inset-0 opacity-30 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-cover bg-center" />
 
                     <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ delay: 0.5, type: "spring" }}
-                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        // Animate position changes
+                        animate={{ top: currentLocation.top, left: currentLocation.left }}
+                        transition={{ type: "spring", stiffness: 50, damping: 20 }}
+                        className="absolute -translate-x-1/2 -translate-y-1/2"
                     >
                         <div className="relative">
                             <div className="w-4 h-4 bg-emerald-500 rounded-full z-10 relative box-content border-2 border-slate-900" />
@@ -81,7 +103,7 @@ export function BentoFeatures({ t }: { t: any }) {
                     <div className="absolute bottom-3 left-3 right-3 space-y-2">
                         <div className="bg-slate-800/90 backdrop-blur text-xs p-2 rounded-lg border border-white/10 flex justify-between items-center">
                             <span className="text-slate-300">Last Seen</span>
-                            <span className="text-emerald-400 font-mono">Paris, FR</span>
+                            <span className="text-emerald-400 font-mono">{currentLocation.name}</span>
                         </div>
                     </div>
                 </div>
