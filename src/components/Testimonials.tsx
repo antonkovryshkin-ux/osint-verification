@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, User, Lock } from "lucide-react";
+import { User } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -8,14 +8,14 @@ export function Testimonials({ t }: { t: any }) {
         {
             text: t?.t1_text,
             author: t?.t1_author,
-            icon: Shield,
+            icon: User,
             color: "text-blue-400",
             bg: "bg-blue-500/10"
         },
         {
             text: t?.t2_text,
             author: t?.t2_author,
-            icon: Lock,
+            icon: User,
             color: "text-purple-400",
             bg: "bg-purple-500/10"
         },
@@ -29,7 +29,7 @@ export function Testimonials({ t }: { t: any }) {
         {
             text: t?.t4_text,
             author: t?.t4_author,
-            icon: Shield,
+            icon: User,
             color: "text-amber-400",
             bg: "bg-amber-500/10"
         }
