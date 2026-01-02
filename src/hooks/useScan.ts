@@ -4,16 +4,22 @@ export type ScanStatus = 'idle' | 'scanning' | 'complete' | 'cancelled';
 
 const LOG_MESSAGES = [
     '> Initializing OSINT modules...',
+    '> Handshaking with secure relays...',
+    '> Encrypting outgoing traffic (AES-256)...',
+    '> Establishing tunnel to EU-Central node...',
     '> Normalizing input... OK',
-    '> Resolving public endpoints...',
-    '> Enumerating services: Instagram...',
+    '> Querying public endpoints...',
+    '> Analyzing social graph...',
+    '> [Trusted Service] Response received: 200 OK',
     '> Match found: Instagram (public trace)',
-    '> Checking: Google...',
-    '> Checking: WhatsApp...',
-    '> Checking: Telegram...',
-    '> Checking: Dating services... potential match',
+    '> Decrypting payload from archive node...',
+    '> Checking: Google Cache...',
+    '> Checking: WhatsApp Activity...',
+    '> Checking: Telegram Bio...',
+    '> [Secure] Cross-referencing dating databases...',
+    '> Dating services... potential match found',
     '> Building evidence map...',
-    '> Preparing summary...',
+    '> Finalizing report encryption...',
     '> Done'
 ];
 
