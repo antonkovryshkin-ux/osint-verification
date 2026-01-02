@@ -90,6 +90,9 @@ export const translations = {
             t3_author: "Mary T.",
             t4_text: "Their investigation showed my girlfriend had been hiding multiple boyfriends. The information was a wake-up call.",
             t4_author: "Peter S."
+        },
+        supported_platforms: {
+            title: "Our AI supports these platforms"
         }
     },
     de: {
@@ -181,6 +184,9 @@ export const translations = {
             t3_author: "Mary T.",
             t4_text: "Die Untersuchung zeigte, dass meine Freundin mehrere Freunde verheimlichte. Ein Weckruf.",
             t4_author: "Peter S."
+        },
+        supported_platforms: {
+            title: "Unsere KI unterstützt diese Plattformen"
         }
     },
     fr: {
@@ -272,6 +278,9 @@ export const translations = {
             t3_author: "Mary T.",
             t4_text: "L'enquête a montré que ma copine cachait plusieurs petits amis. C'était un réveil brutal.",
             t4_author: "Peter S."
+        },
+        supported_platforms: {
+            title: "Notre IA supporte ces plateformes"
         }
     },
     it: {
@@ -363,6 +372,9 @@ export const translations = {
             t3_author: "Mary T.",
             t4_text: "L'indagine ha mostrato che la mia ragazza nascondeva più ragazzi. È stata una sveglia.",
             t4_author: "Peter S."
+        },
+        supported_platforms: {
+            title: "La nostra IA supporta queste piattaforme"
         }
     },
     es: {
@@ -454,6 +466,9 @@ export const translations = {
             t3_author: "Mary T.",
             t4_text: "La investigación mostró que mi novia ocultaba varios novios. Fue un despertar.",
             t4_author: "Peter S."
+        },
+        supported_platforms: {
+            title: "Nuestra IA soporta estas plataformas"
         }
     },
     ru: {
@@ -545,6 +560,9 @@ export const translations = {
             t3_author: "Mary T.",
             t4_text: "Проверка показала, что моя девушка скрывала нескольких парней. Это открыло мне глаза.",
             t4_author: "Peter S."
+        },
+        supported_platforms: {
+            title: "Наш искусственный интеллект поддерживает эти платформы"
         }
     }
 };

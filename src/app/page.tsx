@@ -11,6 +11,7 @@ import { translations, type Language } from '@/lib/i18n';
 import { HowItWorksVertical } from '@/components/HowItWorksVertical';
 import { LiveStats } from '@/components/LiveStats';
 import { Testimonials } from '@/components/Testimonials';
+import { SupportedPlatforms } from '@/components/SupportedPlatforms';
 
 export default function Home() {
   const [scanState, setScanState] = useState<'idle' | 'scanning' | 'results'>('idle');
@@ -52,6 +53,7 @@ export default function Home() {
           <>
             <Hero onStartScan={handleStartScan} isScanning={scanState === 'scanning'} t={t.hero} />
             <LiveStats t={t.social_proof} />
+            <SupportedPlatforms t={t.supported_platforms} />
             <HowItWorksVertical t={t.how_it_works} />
             <ValueProposition t={t.value_prop} bentoTexts={t.bento} />
             <Testimonials t={t.social_proof} />
