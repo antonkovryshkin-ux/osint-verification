@@ -53,7 +53,7 @@ export const translations = {
             step1_desc: "Provide username, email, or phone number",
             step2_title: "Global Scan",
             step2_desc: "AI scans 50+ networks in real-time",
-            step2_time: "~ 30 sec",
+            step2_time: "~ 60 sec",
             step3_title: "Receive Report",
             step3_desc: "Get a detailed PDF report instantly",
             step3_time: "Instant"
@@ -147,7 +147,7 @@ export const translations = {
             step1_desc: "Benutzername, E-Mail oder Telefonnummer angeben",
             step2_title: "Globaler Scan",
             step2_desc: "KI scannt 50+ Netzwerke in Echtzeit",
-            step2_time: "~ 30 Sek",
+            step2_time: "~ 60 Sek",
             step3_title: "Bericht erhalten",
             step3_desc: "Detaillierten PDF-Bericht sofort erhalten",
             step3_time: "Sofort"
@@ -241,7 +241,7 @@ export const translations = {
             step1_desc: "Fournir nom d'utilisateur, email ou téléphone",
             step2_title: "Scan Global",
             step2_desc: "L'IA scanne 50+ réseaux en temps réel",
-            step2_time: "~ 30 sec",
+            step2_time: "~ 60 sec",
             step3_title: "Recevoir le rapport",
             step3_desc: "Obtenez un rapport PDF détaillé instantanément",
             step3_time: "Instantané"
@@ -335,7 +335,7 @@ export const translations = {
             step1_desc: "Fornisci nome utente, email o telefono",
             step2_title: "Scansione Globale",
             step2_desc: "AI scansiona 50+ reti in tempo reale",
-            step2_time: "~ 30 sec",
+            step2_time: "~ 60 sec",
             step3_title: "Ricevi Rapporto",
             step3_desc: "Ottieni un rapporto PDF dettagliato istantaneamente",
             step3_time: "Istantaneo"
@@ -429,7 +429,7 @@ export const translations = {
             step1_desc: "Proporcionar nombre de usuario, email o teléfono",
             step2_title: "Escaneo Global",
             step2_desc: "IA escanea 50+ redes en tiempo real",
-            step2_time: "~ 30 seg",
+            step2_time: "~ 60 seg",
             step3_title: "Recibir Informe",
             step3_desc: "Obtenga un informe PDF detallado al instante",
             step3_time: "Instantáneo"
@@ -523,7 +523,7 @@ export const translations = {
             step1_desc: "Укажите никнейм, email или телефон",
             step2_title: "Глобальный поиск",
             step2_desc: "ИИ сканирует 50+ сетей в реальном времени",
-            step2_time: "~ 30 сек",
+            step2_time: "~ 60 сек",
             step3_title: "Получите отчет",
             step3_desc: "Подробный PDF-отчет мгновенно",
             step3_time: "Мгновенно"
