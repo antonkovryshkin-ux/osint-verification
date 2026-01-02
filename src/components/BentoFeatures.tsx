@@ -8,12 +8,12 @@ export function BentoFeatures({ t }: { t: any }) {
     const [locationIndex, setLocationIndex] = useState(0);
 
     const locations = [
-        { name: "Paris, FR", top: "28%", left: "49%" },
-        { name: "New York, US", top: "33%", left: "28%" },
-        { name: "Tokyo, JP", top: "36%", left: "86%" },
-        { name: "London, UK", top: "26%", left: "48%" },
-        { name: "Sydney, AU", top: "72%", left: "85%" },
-        { name: "Rio, BR", top: "68%", left: "33%" }
+        { name: "Paris, FR", top: "34%", left: "49%" },
+        { name: "New York, US", top: "38%", left: "28%" },
+        { name: "Tokyo, JP", top: "40%", left: "85%" },
+        { name: "London, UK", top: "33%", left: "48%" },
+        { name: "Sydney, AU", top: "70%", left: "88%" },
+        { name: "Rio, BR", top: "63%", left: "33%" }
     ];
 
     useEffect(() => {
