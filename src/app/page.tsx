@@ -1,65 +1,78 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import Hero from '@/components/Hero';
+import EvidenceTicker from '@/components/EvidenceTicker';
+import ScanModal from '@/components/ScanModal';
+import PartialResults from '@/components/PartialResults';
+import ValueProposition from '@/components/ValueProposition';
+import LanguageSelector from '@/components/LanguageSelector';
+import { translations, type Language } from '@/lib/i18n';
+import { HowItWorksVertical } from '@/components/HowItWorksVertical'; // Added this import
 
 export default function Home() {
+  const [scanState, setScanState] = useState<'idle' | 'scanning' | 'results'>('idle');
+  const [target, setTarget] = useState('');
+  const [lang, setLang] = useState<Language>('en'); // Default to English as per new global focus
+
+  const t = translations[lang];
+
+  const handleStartScan = (query: string) => {
+    setTarget(query);
+    setScanState('scanning');
+  };
+
+  const handleScanComplete = () => {
+    setScanState('results');
+  };
+
+  const handleScanCancel = () => {
+    setScanState('idle');
+    setTarget('');
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="flex min-h-screen flex-col relative bg-slate-950 overflow-x-hidden">
+      {/* Background Gradients */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="absolute top-4 right-4 z-50">
+        <LanguageSelector currentLang={lang} onSelect={setLang} />
+      </div>
+
+      <div className="relative z-10 flex-1 flex flex-col">
+        {scanState === 'results' ? (
+          <PartialResults t={t.results} lang={lang} />
+        ) : (
+          <>
+            <Hero onStartScan={handleStartScan} isScanning={scanState === 'scanning'} t={t.hero} />
+            <HowItWorksVertical t={t.how_it_works} />
+            <ValueProposition t={t.value_prop} bentoTexts={t.bento} />
+          </>
+        )}
+      </div>
+
+      <EvidenceTicker lang={lang} />
+
+      <ScanModal
+        isOpen={scanState === 'scanning'}
+        onClose={handleScanCancel}
+        onComplete={handleScanComplete}
+        target={target}
+        t={t.modal}
+      />
+
+      <footer className="relative z-10 py-6 text-center text-xs text-muted-foreground/30 border-t border-slate-900 bg-slate-950">
+        <p>© 2026 OSINT Verification. All rights reserved.</p>
+        <p className="mt-1">
+          {lang === 'de' ? 'Haftungsausschluss: Wir verwenden nur öffentlich zugängliche Daten.' :
+            lang === 'ru' ? 'Дисклеймер: Мы используем данные только из открытых источников.' :
+              'Disclaimer: We use only publicly available data (OSINT). We do not hack accounts.'}
+        </p>
+      </footer>
+    </main>
   );
 }
